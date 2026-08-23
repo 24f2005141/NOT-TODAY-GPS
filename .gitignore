@@ -1,0 +1,19 @@
+
+# Added for security & repository hygiene
+*.pem
+*.key
+.env
+.env.*
+node_modules/
+.venv/
+venv/
+__pycache__/
+.next/
+dist/
+build/
+.gcloud-temp/
+*.rdb
+celerybeat-schedule
+memecam_env/
+gcp-cloud-q1-details.json
+~$*
