@@ -1,0 +1,28 @@
+hereflow_localizer:
+  ros__parameters:
+    # Initial coordinate supplied by the user, in the local odom frame (metres/radians).
+    initial_x: 0.0
+    initial_y: 0.0
+    initial_z: 0.0
+    initial_yaw: 0.0
+
+    # Host CAN interface: use can0 for Linux SocketCAN, or a COM port for SLCAN.
+    can_interface: can0
+    can_bitrate: 1000000
+    hereflow_node_id: 0   # 0 accepts the first/all HereFlow nodes; otherwise set its DroneCAN node ID.
+
+    # Reject poor flow/range data before it changes the position estimate.
+    min_flow_quality: 100
+    min_range_m: 0.08
+    max_range_m: 3.0      # Increase for an H-Flow variant rated above 3m.
+    max_range_age_s: 0.25
+
+    # Calibration and mounting corrections. Leave at 1.0 after the standard mounting check.
+    flow_scale: 1.0
+    flow_forward_sign: 1.0
+    flow_left_sign: 1.0
+    imu_yaw_sign: 1.0
+
+    publish_rate_hz: 30.0
+    odom_frame: odom
+    base_frame: base_link

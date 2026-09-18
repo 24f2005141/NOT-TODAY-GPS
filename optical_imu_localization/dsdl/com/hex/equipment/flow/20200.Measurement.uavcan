@@ -1,0 +1,7 @@
+# HereFlow integrated optical-flow measurement.
+# The data type is published by HereFlow-compatible DroneCAN firmware.
+
+float32 integration_interval    # Seconds
+float32[2] rate_gyro_integral  # Radians around sensor X/Y
+float32[2] flow_integral       # Integrated line-of-sight motion, radians
+uint8 quality                  # 0 (poor) to 255 (best)
